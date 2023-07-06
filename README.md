@@ -32,6 +32,19 @@ python main.py
 
 5. Star the repo 😄
 
+## 📋 Example
+
+This is an example of a _request.json_ file which contacts **API Ninja's** counter API and increments the counter by 1.
+
+```json
+{
+    "url": "https://api.api-ninjas.com/v1/counter?id=<ID>&hit=true",
+    "method": "GET",
+    "headers": {"X-Api-Key": "<API-KEY>"},
+    "data": {}
+}
+```
+
 ## 📜 Credits
 
 Everything is coded by Alex lo Storto
