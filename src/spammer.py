@@ -11,6 +11,7 @@ class Spammer():
         self.method = self.config.get('method')
         self.headers = self.config.get('headers')
         self.data = self.config.get('data')
+        self.show_response = False
 
     def function(self, amount: int):
         for _ in range(amount):
@@ -31,6 +32,8 @@ class Spammer():
             else:
                 raise ValueError("[ERROR] HTTP request method is invalid")
             print(f"[LOG] {r.status_code}")
+            if self.show_response:
+                print(f"[LOG] {r.text}")
 
     def spam(self):
         pool = mp.Pool(mp.cpu_count())
